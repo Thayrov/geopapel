@@ -5,19 +5,19 @@ const NavbarPages = () => {
 
     return (
         <Stack direction={direction} spacing={'5vw'}>
-            <Button variant="link" color="brand.black" fontSize="lg">
+            <Button variant="ghost" color="brand.black" fontSize="lg">
                 Nosotros
             </Button>
-            <Button variant="link" color="brand.black" fontSize="lg">
+            <Button variant="ghost" color="brand.black" fontSize="lg">
                 Reciclaje
             </Button>
-            <Button variant="link" color="brand.black" fontSize="lg">
+            <Button variant="ghost" color="brand.black" fontSize="lg">
                 Productos
             </Button>
-            <Button variant="link" color="brand.black" fontSize="lg">
+            <Button variant="ghost" color="brand.black" fontSize="lg">
                 Testimonios
             </Button>
-            <Button variant="link" color="brand.black" fontSize="lg">
+            <Button variant="ghost" color="brand.black" fontSize="lg">
                 Contacto
             </Button>
         </Stack>
