@@ -12,9 +12,11 @@ import {
     Testimonials,
 } from './components';
 
+import { Box } from '@chakra-ui/react';
+
 function App() {
     return (
-        <div>
+        <Box bg="brand.yellow" w="100vw" minH="100vh">
             <Navbar />
             <Banner />
             <Testimonials />
@@ -24,7 +26,7 @@ function App() {
             <Newsletter />
             <InstagramInfo />
             <Footer />
-        </div>
+        </Box>
     );
 }
 
