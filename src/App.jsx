@@ -18,11 +18,21 @@ function App() {
     return (
         <Box bg="brand.yellow" w="100vw" minH="100vh">
             <Navbar />
-            <Banner />
-            <Testimonials />
-            <Products />
-            <RecyclingInfo />
-            <ContactInfo />
+            <Box id="nosotros">
+                <Banner />
+            </Box>
+            <Box id="reciclaje">
+                <RecyclingInfo />
+            </Box>
+            <Box id="productos">
+                <Products />
+            </Box>
+            <Box id="testimonios">
+                <Testimonials />
+            </Box>
+            <Box id="contacto">
+                <ContactInfo />
+            </Box>
             <Newsletter />
             <InstagramInfo />
             <Footer />
