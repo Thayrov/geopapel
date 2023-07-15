@@ -13,7 +13,8 @@ const banners = [
 
 const Banner = () => {
     const [current, setCurrent] = useState(0);
-    const dotColor = useToken('colors', 'brand.black');
+    const activeBarColor = useToken('colors', 'white');
+    const inactiveBarColor = useToken('colors', 'gray.400');
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -26,7 +27,7 @@ const Banner = () => {
     }, []);
 
     return (
-        <VStack>
+        <VStack position="relative">
             <MotionBox
                 key={current}
                 initial={{ opacity: 0 }}
@@ -42,15 +43,24 @@ const Banner = () => {
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
             </MotionBox>
-            <HStack spacing={1}>
+            <HStack
+                position="absolute"
+                bottom={0}
+                left="50%"
+                transform="translateX(-50%)"
+                spacing={1}
+                p={2}
+                bgColor="rgba(0, 0, 0, 0.5)"
+                borderRadius="full">
                 {banners.map((_, index) => (
                     <Box
                         key={index}
-                        w={2}
-                        h={2}
+                        w={8}
+                        h={1}
                         borderRadius="full"
-                        bgColor={dotColor}
-                        opacity={index === current ? 1 : 0.5}
+                        bgColor={index === current ? activeBarColor : inactiveBarColor}
+                        onClick={() => setCurrent(index)}
+                        cursor="pointer"
                     />
                 ))}
             </HStack>
