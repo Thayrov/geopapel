@@ -5,7 +5,7 @@ const NavbarLogo = () => {
         <Box w="10vh" h="8vh">
             <Image
                 src="/src/assets/logo.png"
-                alt="Logo de Geopapel"
+                alt="Logo de Geo Papel"
                 boxSize="100%"
                 objectFit="contain"
             />

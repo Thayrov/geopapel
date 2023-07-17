@@ -23,14 +23,14 @@ function App() {
             <Box id="nosotros">
                 <Nosotros />
             </Box>
-            <Box id="reciclaje">
-                <RecyclingInfo />
+            <Box id="testimonios">
+                <Testimonials />
             </Box>
             <Box id="productos">
                 <Products />
             </Box>
-            <Box id="testimonios">
-                <Testimonials />
+            <Box id="reciclaje">
+                <RecyclingInfo />
             </Box>
             <Box id="contacto">
                 <ContactInfo />
