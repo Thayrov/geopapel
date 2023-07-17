@@ -32,7 +32,7 @@ const Banner = () => {
     }
 
     return (
-        <VStack position="relative">
+        <VStack position="relative" mt="10vh">
             <MotionBox
                 key={current}
                 initial={{ opacity: 0 }}

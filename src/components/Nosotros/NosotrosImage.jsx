@@ -6,11 +6,11 @@ import animationData from '../../assets/dy9qyU3qrv.json';
 const NosotrosImage = () => {
     return (
         <Flex
-            pt={{ base: '0', lg: '20' }}
+            pt={{ base: '5', lg: '20' }}
             w={{ base: '200px', lg: '400px' }}
             h={{ base: '200px', lg: '400px' }}
             bg="brand.yellow"
-            m="0 auto"
+            m={{ base: '10vh auto 0 auto', lg: '0 auto' }}
             alignItems="center"
             justifyContent="center">
             <Center w="100%" h="100%">

@@ -30,7 +30,15 @@ const Navbar = () => {
     const placement = useBreakpointValue({ base: 'left', md: 'top' });
 
     return (
-        <Box bg="brand.white" p={padding} w="100vw">
+        <Box
+            bg="brand.white"
+            p={padding}
+            w="100vw"
+            h="10vh"
+            position="fixed"
+            top="0"
+            zIndex="1000"
+            boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)">
             <Flex justifyContent={justifyContent} alignItems="center">
                 <Box order={pagesOrder}>
                     {isLargerThan992 ? (
