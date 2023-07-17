@@ -7,6 +7,7 @@ import {
     InstagramInfo,
     Navbar,
     Newsletter,
+    Nosotros,
     Products,
     RecyclingInfo,
     Testimonials,
@@ -18,8 +19,9 @@ function App() {
     return (
         <Box bg="brand.yellow" w="100vw" minH="100vh">
             <Navbar />
+            <Banner />
             <Box id="nosotros">
-                <Banner />
+                <Nosotros />
             </Box>
             <Box id="reciclaje">
                 <RecyclingInfo />

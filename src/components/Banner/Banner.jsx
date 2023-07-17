@@ -1,4 +1,4 @@
-import { Box, HStack, VStack, useToken } from '@chakra-ui/react';
+import { Box, HStack, VStack, useMediaQuery, useToken } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 
 import { motion } from 'framer-motion';
@@ -15,6 +15,7 @@ const Banner = () => {
     const [current, setCurrent] = useState(0);
     const activeBarColor = useToken('colors', 'white');
     const inactiveBarColor = useToken('colors', 'gray.400');
+    const [isLargerThan992] = useMediaQuery('(min-width: 992px)');
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -25,6 +26,10 @@ const Banner = () => {
             clearInterval(timer);
         };
     }, []);
+
+    if (!isLargerThan992) {
+        return null;
+    }
 
     return (
         <VStack position="relative">
