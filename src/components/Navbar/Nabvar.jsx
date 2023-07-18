@@ -25,7 +25,7 @@ const Navbar = () => {
     const logoOrder = useBreakpointValue({ base: 2, lg: 1 });
     const pagesOrder = useBreakpointValue({ base: 1, lg: 2 });
     const buttonsOrder = useBreakpointValue({ base: 3, lg: 3 });
-    const padding = useBreakpointValue({ base: '0 2 2 0', lg: '0 4 4 0' });
+    const padding = useBreakpointValue({ base: '2', lg: '4' });
     const paddingLeft = useBreakpointValue({ base: 16, lg: 0 });
     const placement = useBreakpointValue({ base: 'left', md: 'top' });
 

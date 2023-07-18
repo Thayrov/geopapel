@@ -6,9 +6,9 @@ import { motion } from 'framer-motion';
 const MotionBox = motion(Box);
 
 const banners = [
-    'https://res.cloudinary.com/dhjlbf6xs/image/upload/v1689400111/wong-zihoo-DBtgQI-9XdM-unsplash_bikpot.jpg',
-    'https://res.cloudinary.com/dhjlbf6xs/image/upload/v1689400111/dan-rogers-lMIvz5b1vRo-unsplash_mkfer4.jpg',
-    'https://res.cloudinary.com/dhjlbf6xs/image/upload/v1689400111/kent-tupas-WaUcTYPfiCU-unsplash_qcdesy.jpg',
+    'https://res.cloudinary.com/dhjlbf6xs/image/upload/v1689646815/alexander-abero-OypnYfdiQgg-unsplash_n4hv5x.jpg',
+    'https://res.cloudinary.com/dhjlbf6xs/image/upload/v1689646815/cedric-vt-ua0SnGdN-m8-unsplash_zqlydb.jpg',
+    'https://res.cloudinary.com/dhjlbf6xs/image/upload/v1689646815/possessed-photography-1JePildXM7g-unsplash_wbpfdv.jpg',
 ];
 
 const Banner = () => {
