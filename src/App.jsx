@@ -17,7 +17,7 @@ import { Box } from '@chakra-ui/react';
 
 function App() {
     return (
-        <Box bg="brand.yellow" w="100vw" minH="100vh">
+        <Box bg="brand.yellow" w="100%" minH="100vh">
             <Navbar />
             <Banner />
             <Box id="nosotros">

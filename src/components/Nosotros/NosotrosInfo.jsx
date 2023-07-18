@@ -27,6 +27,7 @@ const NosotrosInfo = () => {
                 width={{ base: '330px', lg: '220px' }}
                 bgColor="brand.dark-green"
                 color="brand.white"
+                box-shadow="2px 2px 8px 0px rgba(101, 101, 101, 0.25)"
                 _hover={{ bg: 'brand.black' }}>
                 Ver Productos
             </Button>

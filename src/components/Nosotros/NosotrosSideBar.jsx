@@ -1,15 +1,13 @@
 import { Box, Flex } from '@chakra-ui/react';
 
-import PropTypes from 'prop-types';
-
-const NosotrosSideBar = ({ size }) => {
+const NosotrosSideBar = () => {
     return (
         <Flex
             direction="column"
             justifyContent="center"
             alignItems="center"
             gap={6}
-            w={size}
+            w={{ base: '31px', md: '36px', lg: '66px' }}
             h={{ base: '152px', md: '170px', lg: '246px' }}
             pl={0}
             flexShrink={0}
@@ -18,7 +16,7 @@ const NosotrosSideBar = ({ size }) => {
             top="55%"
             transform="translateY(-50%)"
             bg="brand.dark-green"
-            borderRadius={{ base: '9% 0 0 9%', lg: '12% 0 0 12%' }}>
+            borderRadius={{ base: '9px 0px 0px 9px', lg: '12px 0px 0px 12px' }}>
             <Box
                 as="svg"
                 xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +56,5 @@ const NosotrosSideBar = ({ size }) => {
         </Flex>
     );
 };
-NosotrosSideBar.propTypes = {
-    size: PropTypes.string.isRequired,
-};
+
 export default NosotrosSideBar;

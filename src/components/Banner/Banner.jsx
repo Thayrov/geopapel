@@ -39,7 +39,7 @@ const Banner = () => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                w="100vw"
+                w="100%"
                 h="25vw"
                 overflow="hidden">
                 <img

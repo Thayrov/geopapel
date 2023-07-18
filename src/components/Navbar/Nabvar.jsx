@@ -25,7 +25,7 @@ const Navbar = () => {
     const logoOrder = useBreakpointValue({ base: 2, lg: 1 });
     const pagesOrder = useBreakpointValue({ base: 1, lg: 2 });
     const buttonsOrder = useBreakpointValue({ base: 3, lg: 3 });
-    const padding = useBreakpointValue({ base: 2, lg: 4 });
+    const padding = useBreakpointValue({ base: '0 2 2 0', lg: '0 4 4 0' });
     const paddingLeft = useBreakpointValue({ base: 16, lg: 0 });
     const placement = useBreakpointValue({ base: 'left', md: 'top' });
 
@@ -33,12 +33,12 @@ const Navbar = () => {
         <Box
             bg="brand.white"
             p={padding}
-            w="100vw"
+            w="100%"
             h="10vh"
             position="fixed"
             top="0"
             zIndex="1000"
-            boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)">
+            boxShadow="0px 8px 12px 0px rgba(200, 202, 192, 0.30)">
             <Flex justifyContent={justifyContent} alignItems="center">
                 <Box order={pagesOrder}>
                     {isLargerThan992 ? (
@@ -73,11 +73,11 @@ const Navbar = () => {
                 </Box>
             </Flex>
             <Drawer isOpen={isOpen} placement={placement} onClose={onClose} size="full">
-                <DrawerOverlay mt={'9vh'}>
-                    <DrawerContent mt={'9vh'}>
+                <DrawerOverlay mt={'10vh'}>
+                    <DrawerContent mt={'10vh'}>
                         <DrawerCloseButton />
                         <DrawerHeader></DrawerHeader>
-                        <DrawerBody>
+                        <DrawerBody bg="linear-gradient(180deg, #FEFFF6 0%, #FEFFF6 48.27%, #DFE3CB 100%)">
                             <NavbarPages />
                         </DrawerBody>
                     </DrawerContent>

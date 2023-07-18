@@ -6,19 +6,18 @@ import NosotrosSideBar from './NosotrosSideBar.jsx';
 
 const Nosotros = () => {
     const columns = useBreakpointValue({ base: '1fr', lg: '2fr 2fr 1fr' });
-    const sidebarSize = useBreakpointValue({ base: '31px', md: '36px', lg: '66px' });
 
     return (
         <Box position="relative">
             <Grid
                 templateColumns={columns}
-                gap={6}
+                gap={2}
                 justifyContent="center"
                 py={{ base: 10, lg: 40 }}>
                 <NosotrosImage />
                 <NosotrosInfo />
             </Grid>
-            <NosotrosSideBar size={sidebarSize} />
+            <NosotrosSideBar />
         </Box>
     );
 };
