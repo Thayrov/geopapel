@@ -19,7 +19,9 @@ const Products = () => {
             <Text fontSize={{ base: '42px', md: '64px', lg: '72px' }} fontWeight="600">
                 Productos
             </Text>
-            <SimpleGrid columns={{ base: 1, md: 1, lg: 3 }} spacing={10}>
+            <SimpleGrid
+                columns={{ base: 1, md: 1, lg: 3 }}
+                spacing={{ base: '48px', md: '33px', lg: '48px' }}>
                 {products.map((product) => (
                     <ProductItem key={product.id} product={product} />
                 ))}

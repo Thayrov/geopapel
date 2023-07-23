@@ -3,7 +3,7 @@ import { Button, Flex } from '@chakra-ui/react';
 const NavbarButtons = () => {
     return (
         <Flex direction="row">
-            <Button colorScheme="brand.black">
+            <Button as="a" href="#contacto" colorScheme="brand.black">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="30"
@@ -16,7 +16,7 @@ const NavbarButtons = () => {
                     />
                 </svg>
             </Button>
-            <Button colorScheme="brand.black">
+            <Button as="a" href="#productos" colorScheme="brand.black">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="30"

@@ -3,6 +3,8 @@ import { Box, Flex } from '@chakra-ui/react';
 const NosotrosSideBar = () => {
     return (
         <Flex
+            as="a"
+            href="#contacto"
             direction="column"
             justifyContent="center"
             alignItems="center"

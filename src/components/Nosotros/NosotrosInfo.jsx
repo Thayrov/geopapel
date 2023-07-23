@@ -23,6 +23,8 @@ const NosotrosInfo = () => {
                 del cambio y acompañarte en el camino hacia el.
             </Text>
             <Button
+                as="a"
+                href="#productos"
                 height="66px"
                 width={{ base: '330px', lg: '220px' }}
                 bgColor="brand.dark-green"
