@@ -5,29 +5,41 @@ import { motion } from 'framer-motion';
 
 const MotionBox = motion(Box);
 
-const banners = [
-    'https://res.cloudinary.com/dhjlbf6xs/image/upload/v1689646815/alexander-abero-OypnYfdiQgg-unsplash_n4hv5x.jpg',
-    'https://res.cloudinary.com/dhjlbf6xs/image/upload/v1689646815/cedric-vt-ua0SnGdN-m8-unsplash_zqlydb.jpg',
-    'https://res.cloudinary.com/dhjlbf6xs/image/upload/v1689646815/possessed-photography-1JePildXM7g-unsplash_wbpfdv.jpg',
-];
-
 const Banner = () => {
+    const [banners, setBanners] = useState([]);
     const [current, setCurrent] = useState(0);
     const activeBarColor = useToken('colors', 'white');
     const inactiveBarColor = useToken('colors', 'gray.400');
     const [isLargerThan992] = useMediaQuery('(min-width: 992px)');
 
     useEffect(() => {
+        const url = 'http://localhost:5000/api/banners';
+        fetch(url)
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                setBanners(data.map((bannerObj) => bannerObj.bannerURL));
+            })
+
+            .catch((error) => {
+                console.log('Error:', error);
+            });
+    }, []);
+
+    useEffect(() => {
         const timer = setInterval(() => {
             setCurrent((current) => (current === banners.length - 1 ? 0 : current + 1));
-        }, 5000);
+        }, 10000);
 
         return () => {
             clearInterval(timer);
         };
-    }, []);
+    }, [banners]);
 
-    if (!isLargerThan992) {
+
+    if (!isLargerThan992 || !banners.length) {
+        // Verificamos que hay banners antes de renderizar.
         return null;
     }
 
