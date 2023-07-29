@@ -2,13 +2,16 @@ import { Box, SimpleGrid, Text } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 
 import ProductItem from './ProductItem';
-import data from '../../api/db.json';
 
 const Products = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        setProducts(data.products);
+        const url = `${import.meta.env.VITE_API_URL}/products`;
+        fetch(url)
+            .then((response) => response.json())
+            .then((data) => setProducts(data))
+            .catch((err) => console.log(err));
     }, []);
 
     return (
@@ -22,8 +25,8 @@ const Products = () => {
             <SimpleGrid
                 columns={{ base: 1, md: 1, lg: 3 }}
                 spacing={{ base: '48px', md: '33px', lg: '48px' }}>
-                {products.map((product) => (
-                    <ProductItem key={product.id} product={product} />
+                {products.map((product, index) => (
+                    <ProductItem key={index} product={product} />
                 ))}
             </SimpleGrid>
         </Box>

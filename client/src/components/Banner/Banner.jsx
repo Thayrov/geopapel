@@ -13,7 +13,7 @@ const Banner = () => {
     const [isLargerThan992] = useMediaQuery('(min-width: 992px)');
 
     useEffect(() => {
-        const url = 'http://localhost:5000/api/banners';
+        const url = `${import.meta.env.VITE_API_URL}/banners`;
         fetch(url)
             .then((response) => {
                 return response.json();
@@ -36,7 +36,6 @@ const Banner = () => {
             clearInterval(timer);
         };
     }, [banners]);
-
 
     if (!isLargerThan992 || !banners.length) {
         // Verificamos que hay banners antes de renderizar.

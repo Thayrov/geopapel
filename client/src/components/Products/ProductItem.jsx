@@ -14,7 +14,7 @@ const ProductItem = ({ product }) => {
                     md: '20px 0px 0px 20px',
                     lg: '20px 20px 0px 0px',
                 }}
-                backgroundImage={`url(${product.img})`}
+                backgroundImage={`url(${product.imageURL})`}
                 backgroundSize={{ base: '360px', md: '360px', lg: '28vw' }}
                 backgroundPosition="center"
                 box-shadow="4px 9px 14px 0px rgba(155, 156, 142, 0.19)"
@@ -38,9 +38,9 @@ const ProductItem = ({ product }) => {
                 </Text>
 
                 <Text fontWeight="600" fontSize="xl">
-                    {product.price}
+                    ${product.price}
                 </Text>
-                <Text fontSize="sm">{product.details}</Text>
+                <Text fontSize="sm">{product.description}</Text>
                 <Button
                     height="40px"
                     width="100px"
