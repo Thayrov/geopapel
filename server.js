@@ -1,10 +1,10 @@
-import bannerRouter from './routes/banners.routes.js';
+import { bannerRouter, productsRouter, testimonialsRouter } from './routes/index.js';
+
 import cors from 'cors';
 import environment from './config/config.js';
 import express from 'express';
 import { fileURLToPath } from 'url';
 import path from 'path';
-import productsRouter from './routes/products.routes.js';
 
 const { PORT } = environment;
 export const __filename = fileURLToPath(import.meta.url);
@@ -16,6 +16,7 @@ app.use(express.static(path.resolve(__dirname, '../client/dist')));
 
 app.use('/api/banners', bannerRouter);
 app.use('/api/products', productsRouter);
+app.use('/api/testimonials', testimonialsRouter);
 
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../client/dist', 'index.html'));
