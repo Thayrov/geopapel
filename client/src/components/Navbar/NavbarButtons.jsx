@@ -3,19 +3,6 @@ import { Button, Flex } from '@chakra-ui/react';
 const NavbarButtons = () => {
     return (
         <Flex direction="row">
-            <Button as="a" href="#contacto" colorScheme="brand.black">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
-                    viewBox="0 0 49 49"
-                    fill="none">
-                    <path
-                        d="M24.9313 30.8479C33.6085 30.8479 40.9313 32.2579 40.9313 37.6979C40.9313 43.14 33.5605 44.5 24.9313 44.5C16.256 44.5 8.93127 43.09 8.93127 37.6499C8.93127 32.2079 16.302 30.8479 24.9313 30.8479ZM24.9313 4.5C30.8095 4.5 35.5192 9.20805 35.5192 15.0821C35.5192 20.9562 30.8095 25.6662 24.9313 25.6662C19.0551 25.6662 14.3433 20.9562 14.3433 15.0821C14.3433 9.20805 19.0551 4.5 24.9313 4.5Z"
-                        fill="#414141"
-                    />
-                </svg>
-            </Button>
             <Button as="a" href="#productos" colorScheme="brand.black">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
