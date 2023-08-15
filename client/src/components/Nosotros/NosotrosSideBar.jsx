@@ -1,19 +1,14 @@
-import { Box, Flex, Link, useBreakpointValue } from '@chakra-ui/react';
-import { useEffect, useRef, useState } from 'react';
+import { Box, Flex, Link, useMediaQuery } from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
 
 const NosotrosSideBar = () => {
     const [isFixed, setIsFixed] = useState(false);
-    const sidebarRef = useRef(null);
-    const breakpoint = useBreakpointValue({ base: 'base', md: 'md', lg: 'lg' });
-
+    const [isLargerThan960] = useMediaQuery('(min-width: 960px)');
     useEffect(() => {
         const handleScroll = () => {
-            if (!sidebarRef.current) return;
+            const scrollThreshold = window.innerHeight * 0.4;
 
-            const rect = sidebarRef.current.getBoundingClientRect();
-            const topDistance = rect.top + window.scrollY;
-
-            if (window.scrollY > topDistance - 10) {
+            if (window.scrollY > scrollThreshold) {
                 setIsFixed(true);
             } else {
                 setIsFixed(false);
@@ -24,23 +19,22 @@ const NosotrosSideBar = () => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, [breakpoint]);
+    });
+
     return (
         <Flex
-            ref={sidebarRef}
-            as="a"
-            href="#contacto"
             direction="column"
             justifyContent="center"
             alignItems="center"
             gap={10}
             w={{ base: '31px', md: '36px', lg: '66px' }}
             h={{ base: '152px', md: '170px', lg: '246px' }}
-            position={isFixed ? 'fixed' : 'absolute'}
+            position={isLargerThan960 ? (isFixed ? 'fixed' : 'absolute') : 'fixed'}
             right={0}
-            top={'35%'}
+            top={{ base: '50%', md: '45%', lg: '35%' }}
             bg="brand.dark-green"
-            borderRadius={{ base: '9px 0px 0px 9px', lg: '12px 0px 0px 12px' }}>
+            borderRadius={{ base: '9px 0px 0px 9px', lg: '12px 0px 0px 12px' }}
+            zIndex="1000">
             <Link href="#contacto">
                 <Box
                     as="svg"
