@@ -1,7 +1,4 @@
-import { Center, Flex } from '@chakra-ui/react';
-
-import Lottie from 'lottie-react';
-import animationData from '../../assets/dy9qyU3qrv.json';
+import { Box, Center, Flex, Image } from '@chakra-ui/react';
 
 const NosotrosImage = () => {
     return (
@@ -14,7 +11,14 @@ const NosotrosImage = () => {
             alignItems="center"
             justifyContent="center">
             <Center w="100%" h="100%">
-                <Lottie animationData={animationData} />
+                <Box w="30vh" h="24vh" pb={{ base: '8', lg: '0' }}>
+                    <Image
+                        src="/src/assets/logo.png"
+                        alt="Logo de Geo Papel"
+                        boxSize="100%"
+                        objectFit="contain"
+                    />
+                </Box>
             </Center>
         </Flex>
     );
