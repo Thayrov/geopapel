@@ -1,24 +1,27 @@
-import { Input, Textarea, Button,FormControl} from '@chakra-ui/react'; 
+import { Input, Textarea, Button} from '@chakra-ui/react'; 
 
 
 const ContactForm = () => {
     return <div>
-        <FormControl
-        mt={10}> 
+        <form
+       
+        target="_blank" action="https://formsubmit.co/valentinaillanesperret@gmail.com" method="POST"> 
+          <input type="hidden" name="_next" value="http://localhost:5173/"/>
             <Input
+            type="nombre" name="nombre" required
             variant="custom"
-            type="nombre"
             placeholder='Nombre'
             borderColor="brand.dark-green"
             borderWidth={2}
             backgroundColor="rgba(123, 139, 40, 0.1)"
             p={8}
+            mt={10}
             borderRadius={"20px 20px 20px 20px"}
             />
 
             <Input
+            type="email" name="email"  required
             variant="custom"
-            type="email"
             placeholder='Email'
             mt={{base:4, lg:6}}
             borderColor="brand.dark-green"
@@ -30,7 +33,7 @@ const ContactForm = () => {
 
             <Textarea
             variant="custom"
-            type="mensaje"
+            type="mensaje" name="mensaje" required
             placeholder='Tu mensaje...'
             mt={{base:4, lg:6}}
             size="lg"
@@ -55,7 +58,7 @@ const ContactForm = () => {
             _hover={{ bg: 'brand.black' }}
             _focus={{outlineColor: "transparent"}}
             > Enviar </Button>
-        </FormControl>
+        </form>
     </div>;
 };
 

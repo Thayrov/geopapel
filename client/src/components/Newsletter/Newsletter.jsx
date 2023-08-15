@@ -30,13 +30,19 @@ const Newsletter = () => {
                         pt={{ base: 4, lg: 8 }}>Queres recibir todas nuestras ofertas? Registrate ya mismo y comenzá a disfrutarlas!</Text>
 
                     <Stack>
+                        <form target="_blank" 
+                       action="https://formsubmit.co/valentinaillanesperret@gmail.com"
+                        method="POST"
+                        > 
+                       <input type="hidden" name="_next" value="http://localhost:5173/"/>
+
                         <InputGroup
                             variant="custom"
                             width={{ base: "400px", lg: "700px" }}
                             backgroundColor="#FEFFF6"
                             p={4}
                             borderRadius="20px 20px 20px 20px">
-                            <Input
+                            <Input  type="email" name="email" class="form-control" required
                                 placeholder='Email'
                                 fontWeight={600}
                                 fontSize={20}
@@ -64,9 +70,8 @@ const Newsletter = () => {
                                         boxSize={40} />
                                 </Button>
                             </InputRightElement>
-
-
                         </InputGroup>
+                        </form>
                     </Stack>
                 </Flex>
             </Box>
