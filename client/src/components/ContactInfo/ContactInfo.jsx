@@ -1,13 +1,43 @@
-import { Box } from '@chakra-ui/react';
-
+import { Box,Text,Grid,GridItem,Center,Flex } from '@chakra-ui/react'; 
+import Lottie from 'lottie-react';
+import animationData from '../../assets/Email2.json';
+import ContactData from "./ContactData.jsx"
+import ContactForm from"./ContactForm.jsx"
 const ContactInfo = () => {
     return (
         <section>
-            <h1>Contact Info</h1>
+            
+            <Box p={{ base: '6.5vw', lg: '10vw' }}>
+                <Grid templateColumns={{base:"1fr", md:"1fr", lg: "repeat(2,1fr)"}}  mr={35} mt={10}>
+                    <GridItem>
+                        <Flex> 
+                    <Box>
+                        <Text fontSize={{ base: '28px', md: '32px', lg: '48px' }} fontWeight="400"> Info </Text>
+                        <Text fontSize={{ base: '42px', md: '64px', lg: '72px' }} fontWeight="600"> Contacto</Text> 
+                    </Box>
+          
+                    <Center w="100%" h="100%">
+                        <Box display={{ base: "block", md: "block", lg:"none" }}
+                            w={{ base: '26vw', md: '16vw', lg: '20vw' }}
+                            h={{ base: '26vw', md: '16vw', lg: '20vw' }}
+                            >
+                            <Lottie animationData={animationData} />
+                        </Box>
+                    </Center>
+                 </Flex>
+                        <ContactForm/>
+                    </GridItem> 
+                    <GridItem>
+                        <ContactData />
+                    </GridItem>
+                </Grid>
+            </Box>
+
             <Box display="flex" justifyContent="center" alignItems="center">
                 <Box
+                    mb={{base:10, lg:20}}
                     width={{ base: '90vw', lg: '80vw' }}
-                    height={{ base: '80vw', lg: '20vw' }}
+                    height={{ base: '30vw', lg: '20vw' }}
                     borderRadius="20px"
                     boxShadow="0 0 0 2px transparent"
                     overflow="hidden">
