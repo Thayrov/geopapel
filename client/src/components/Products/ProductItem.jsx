@@ -80,7 +80,7 @@ const ProductItem = ({ product }) => {
                         {product.description}
                     </Text>
                     <Link
-                        href={`https://wa.me/5491168070543?text=Hola,%20me%20interesa%20cotizar%20el%20producto%20"+${product.title}+",%20¿me%20pueden%20ayudar?`}
+                        href={`https://wa.me/5491168070543?text=Hola,%20me%20interesa%20cotizar%20el%20producto:%20"+${product.title}+",%20¿me%20pueden%20ayudar?`}
                         isExternal>
                         <Button
                             rightIcon={<ExternalLinkIcon />}
