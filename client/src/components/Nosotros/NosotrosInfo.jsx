@@ -17,10 +17,13 @@ const NosotrosInfo = () => {
                 px={{ base: '12', lg: '0' }}>
                 Busca formar parte de un nuevo paradigma en donde lo social, económico y ambiental
                 logran una amigable coexistencia. Creemos que el cambio hacia un mundo sustentable
-                es perfectamente alcanzable y realizable. Nuestros productos están realizados
-                exclusivamente con materiales y recursos alineados al cuidado del medio ambiente con
-                el fin de reducir el impacto que tenemos sobre el planeta tierra, queremos ser parte
-                del cambio y acompañarte en el camino hacia el.
+                es perfectamente alcanzable y realizable.
+                <br />
+                <br />
+                Nuestros productos están realizados exclusivamente con materiales y recursos
+                alineados al cuidado del medio ambiente con el fin de reducir el impacto que tenemos
+                sobre el planeta tierra, queremos ser parte del cambio y acompañarte en el camino
+                hacia el.
             </Text>
             <Button
                 as="a"

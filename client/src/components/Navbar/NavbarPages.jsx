@@ -16,12 +16,12 @@ const NavbarPages = () => {
             </Button>
             <Button
                 as="a"
-                href="#reciclaje"
+                href="#sustentabilidad"
                 variant="ghost"
                 color="brand.black"
                 fontSize={fontSize}
                 fontWeight={600}>
-                Reciclaje
+                Sustentabilidad
             </Button>
             <Button
                 as="a"

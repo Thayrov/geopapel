@@ -14,14 +14,16 @@ const Testimonials = () => {
             .catch((err) => console.log(err));
     }, []);
     return (
-        <Box p={{ base: '10', lg: '100' }}>
+        <Box p={{ base: '6.5vw', lg: '10vw' }}>
             <Text fontSize={{ base: '28px', md: '32px', lg: '48px' }} fontWeight="400">
                 Testimonios
             </Text>
             <Text fontSize={{ base: '42px', md: '64px', lg: '72px' }} fontWeight="600">
                 Geo Papel
             </Text>
-            <SimpleGrid columns={{ base: 1, md: 1, lg: 3 }} spacing="48px">
+            <SimpleGrid
+                columns={{ base: 1, md: 1, lg: 3 }}
+                spacing={{ base: '13vw', md: '4.3vw', lg: '2.5vw' }}>
                 {testimonials.map((testimonial, index) => (
                     <TestimonialItem key={index} testimonial={testimonial} />
                 ))}

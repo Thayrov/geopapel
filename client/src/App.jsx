@@ -29,7 +29,7 @@ function App() {
             <Box id="productos">
                 <Products />
             </Box>
-            <Box id="reciclaje">
+            <Box id="sustentabilidad">
                 <RecyclingInfo />
             </Box>
             <Box id="contacto">

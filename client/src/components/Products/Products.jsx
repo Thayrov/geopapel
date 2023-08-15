@@ -15,7 +15,7 @@ const Products = () => {
     }, []);
 
     return (
-        <Box p={{ base: '10', lg: '100' }}>
+        <Box p={{ base: '4.2vw', md: '5vw', lg: '10.4vw' }}>
             <Text fontSize={{ base: '28px', md: '32px', lg: '48px' }} fontWeight="400">
                 Geo Papel
             </Text>
@@ -23,8 +23,9 @@ const Products = () => {
                 Productos
             </Text>
             <SimpleGrid
+                py="5vw"
                 columns={{ base: 1, md: 1, lg: 3 }}
-                spacing={{ base: '48px', md: '33px', lg: '48px' }}>
+                spacing={{ base: '13vw', md: '4.3vw', lg: '2.5vw' }}>
                 {products.map((product, index) => (
                     <ProductItem key={index} product={product} />
                 ))}

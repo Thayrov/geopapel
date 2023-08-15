@@ -4,10 +4,11 @@ import PropTypes from 'prop-types';
 
 const TestimonialItem = ({ testimonial }) => {
     const theme = useTheme();
+
     return (
         <Flex pt={20} position="relative" justifyContent="center" alignItems="center">
             <svg
-                width="326"
+                width="330"
                 height="302"
                 viewBox="0 0 326 302"
                 fill="none"
@@ -55,7 +56,7 @@ const TestimonialItem = ({ testimonial }) => {
                     <Text
                         color="#232323"
                         textAlign="center"
-                        fontSize="14px"
+                        fontSize={{ base: '14px', md: '20px' }}
                         fontStyle="normal"
                         fontWeight="400"
                         lineHeight="20px">
