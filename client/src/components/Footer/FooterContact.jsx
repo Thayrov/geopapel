@@ -13,12 +13,12 @@ const FooterContact = () => {
                 Contactanos
             </Text>
             <UnorderedList styleType="none"
-                fontSize={{base:"14px", lg: "18px" }}
-                width={{base:"80%"}}>
+                fontSize={{base:"14px",md:"16px", lg: "18px" }}
+                width={{base:"80%", md:"100%", lg:"100%"}}>
                 <ListItem pt={{ base:2, lg: 4 }} >
                     <Flex>
                         <Image src={iconFooterContact1}></Image>
-                        <Text pl={4} pt={2}> Domingo Savio 2919, San Isidro, Buenos Aires</Text>
+                        <Text pl={{base:4, lg: 4}} pt={2}> Domingo Savio 2919, San Isidro, Buenos Aires</Text>
                     </Flex>
                 </ListItem>
                 <ListItem pt={{ base:2, lg: 4 }} >
