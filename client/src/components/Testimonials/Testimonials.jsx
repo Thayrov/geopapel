@@ -14,7 +14,7 @@ const Testimonials = () => {
             .catch((err) => console.log(err));
     }, []);
     return (
-        <Box p={{ base: '6.5vw', lg: '10vw' }}>
+        <Box p={{ base: '10vw' }}>
             <Text fontSize={{ base: '28px', md: '32px', lg: '48px' }} fontWeight="400">
                 Testimonios
             </Text>

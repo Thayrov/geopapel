@@ -15,7 +15,7 @@ const Products = () => {
     }, []);
 
     return (
-        <Box p={{ base: '4.2vw', md: '5vw', lg: '10.4vw' }}>
+        <Box p={{ base: '10vw', md: '10vw', lg: '10.4vw' }}>
             <Text fontSize={{ base: '28px', md: '32px', lg: '48px' }} fontWeight="400">
                 Geo Papel
             </Text>
