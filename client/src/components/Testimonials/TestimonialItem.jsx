@@ -9,8 +9,8 @@ const TestimonialItem = ({ testimonial }) => {
         <Flex pt={20} position="relative" justifyContent="center" alignItems="center">
             <Box
                 as="svg"
-                width={{ base: '70vw', md: '55.99vw', lg: '44.79vw', xl: '32.65vw' }} //"330" {{base:'68.75vw',md:'55.99vw',lg:'44.79vw',xl:'35.83vw'}}
-                height={{ base: '65vw', md: '51.43vw', lg: '41.15vw', xl: '30vw' }} //"302"
+                width={{ base: '70vw', md: '55.99vw', lg: '44.79vw', xl: '32.65vw' }}
+                height={{ base: '65vw', md: '51.43vw', lg: '41.15vw', xl: '30vw' }}
                 viewBox="0 0 326 302"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg">
