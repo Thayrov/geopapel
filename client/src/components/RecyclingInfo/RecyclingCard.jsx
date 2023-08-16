@@ -3,7 +3,6 @@ import { Flex, Grid, GridItem, Image, Text } from '@chakra-ui/react';
 import recyclingIcon1 from '../../assets/recyclingIcon1.svg';
 import recyclingIcon2 from '../../assets/recyclingIcon2.svg';
 import recyclingIcon3 from '../../assets/recyclingIcon3.svg';
-
 const RecyclingCard = () => {
     return (
         <div>

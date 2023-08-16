@@ -39,39 +39,50 @@ const Newsletter = () => {
                     </Text>
 
                     <Stack>
-                        <InputGroup
-                            variant="custom"
-                            width={{ base: '400px', lg: '700px' }}
-                            backgroundColor="#FEFFF6"
-                            p={4}
-                            borderRadius="20px 20px 20px 20px">
-                            <Input
-                                placeholder="Email"
-                                fontWeight={600}
-                                fontSize={20}
-                                size="lg"
-                                color="brand.dark-green"
-                                borderColor="#FEFFF6"
+                        <form
+                            action="https://formsubmit.co/valentinaillanesperret@gmail.com"
+                            method="POST">
+                            <input type="hidden" name="_next" value="http://localhost:5173/" />
+                            <input type="hidden" name="_captcha" value="false" />
+
+                            <InputGroup
+                                variant="custom"
+                                width={{ base: '400px', lg: '700px' }}
                                 backgroundColor="#FEFFF6"
-                                _hover={{ borderColor: '#FEFFF6' }}
-                                _placeholder={{
-                                    color: 'brand.dark-green',
-                                }}
-                            />
-                            <InputRightElement m={6} color="brand.dark-green">
-                                <Button
-                                    variant="ghost"
+                                p={4}
+                                borderRadius="20px 20px 20px 20px">
+                                <Input
+                                    type="email"
+                                    name="email"
+                                    class="form-control"
+                                    required
+                                    placeholder="Email"
+                                    fontWeight={600}
+                                    fontSize={20}
+                                    size="lg"
+                                    color="brand.dark-green"
+                                    borderColor="#FEFFF6"
                                     backgroundColor="#FEFFF6"
                                     _hover={{ borderColor: '#FEFFF6' }}
-                                    _focus={{
-                                        bg: 'white',
-                                        outlineColor: 'transparent',
+                                    _placeholder={{
+                                        color: 'brand.dark-green',
                                     }}
-                                    type="submit">
-                                    <ArrowForwardIcon color="#7B8B28" boxSize={40} />
-                                </Button>
-                            </InputRightElement>
-                        </InputGroup>
+                                />
+                                <InputRightElement m={6} color="brand.dark-green">
+                                    <Button
+                                        variant="ghost"
+                                        backgroundColor="#FEFFF6"
+                                        _hover={{ borderColor: '#FEFFF6' }}
+                                        _focus={{
+                                            bg: 'white',
+                                            outlineColor: 'transparent',
+                                        }}
+                                        type="submit">
+                                        <ArrowForwardIcon color="#7B8B28" boxSize={40} />
+                                    </Button>
+                                </InputRightElement>
+                            </InputGroup>
+                        </form>
                     </Stack>
                 </Flex>
             </Box>

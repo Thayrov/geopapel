@@ -1,7 +1,6 @@
 import { Box, Button, Flex, Image, Text } from '@chakra-ui/react';
 
 import instagramIcon from '../../assets/instagramIcon.svg';
-
 const InstagramInfo = () => {
     return (
         <section>
@@ -22,18 +21,21 @@ const InstagramInfo = () => {
                             eco_comunicacion
                         </Text>
                     </Flex>
-                    <Button
-                        fontSize="20px"
-                        p={8}
-                        width={{ base: '80%', lg: '200px' }}
-                        bgColor="brand.dark-green"
-                        color="brand.white"
-                        box-shadow="2px 2px 8px 0px rgba(101, 101, 101, 0.25)"
-                        borderRadius="20px 20px 20px 20px"
-                        _hover={{ bg: 'brand.black' }}>
+                    <a href="https://www.instagram.com/eco_comunicacion/">
                         {' '}
-                        Seguinos
-                    </Button>
+                        <Button
+                            fontSize="20px"
+                            p={8}
+                            width={{ base: '80%', lg: '200px' }}
+                            bgColor="brand.dark-green"
+                            color="brand.white"
+                            box-shadow="2px 2px 8px 0px rgba(101, 101, 101, 0.25)"
+                            borderRadius="20px 20px 20px 20px"
+                            _hover={{ bg: 'brand.black' }}>
+                            {' '}
+                            Seguinos
+                        </Button>
+                    </a>
                 </Flex>
             </Box>
         </section>

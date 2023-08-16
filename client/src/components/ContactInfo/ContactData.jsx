@@ -41,14 +41,17 @@ const ContactData = () => {
                             </Flex>
                         </ListItem>
                         <ListItem pt={{ base: 2, lg: 4 }}>
-                            <Flex>
-                                <Image src={iconContact3}></Image>
-                                <Text pl={4} pt={2}>
-                                    {' '}
-                                    1168070543
-                                </Text>
-                            </Flex>
+                            <a href="https://wa.me/5491168070543?">
+                                <Flex>
+                                    <Image src={iconContact3}></Image>
+                                    <Text pl={4} pt={2}>
+                                        {' '}
+                                        1168070543
+                                    </Text>
+                                </Flex>
+                            </a>
                         </ListItem>
+
                         <ListItem pt={{ base: 2, lg: 4 }}>
                             <Flex>
                                 <Image src={iconContact4}></Image>

@@ -4,7 +4,6 @@ import iconFooterContact1 from '../../assets/iconFooterContact1.svg';
 import iconFooterContact2 from '../../assets/iconFooterContact2.svg';
 import iconFooterContact3 from '../../assets/iconFooterContact3.svg';
 import iconFooterContact4 from '../../assets/iconFooterContact4.svg';
-
 const FooterContact = () => {
     return (
         <div>
@@ -14,12 +13,12 @@ const FooterContact = () => {
                 </Text>
                 <UnorderedList
                     styleType="none"
-                    fontSize={{ base: '14px', lg: '18px' }}
-                    width={{ base: '80%' }}>
+                    fontSize={{ base: '14px', md: '16px', lg: '18px' }}
+                    width={{ base: '80%', md: '100%', lg: '100%' }}>
                     <ListItem pt={{ base: 2, lg: 4 }}>
                         <Flex>
                             <Image src={iconFooterContact1}></Image>
-                            <Text pl={4} pt={2}>
+                            <Text pl={{ base: 4, lg: 4 }} pt={2}>
                                 {' '}
                                 Domingo Savio 2919, San Isidro, Buenos Aires
                             </Text>
@@ -35,13 +34,15 @@ const FooterContact = () => {
                         </Flex>
                     </ListItem>
                     <ListItem pt={{ base: 2, lg: 4 }}>
-                        <Flex>
-                            <Image src={iconFooterContact3}></Image>
-                            <Text pl={4} pt={2}>
-                                {' '}
-                                1168070543
-                            </Text>
-                        </Flex>
+                        <a href="https://wa.me/5491168070543?">
+                            <Flex>
+                                <Image src={iconFooterContact3}></Image>
+                                <Text pl={4} pt={2}>
+                                    {' '}
+                                    1168070543
+                                </Text>
+                            </Flex>
+                        </a>
                     </ListItem>
                     <ListItem pt={{ base: 2, lg: 4 }}>
                         <Flex>
