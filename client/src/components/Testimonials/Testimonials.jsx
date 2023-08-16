@@ -1,4 +1,4 @@
-import { Box, SimpleGrid, Text } from '@chakra-ui/react';
+import { Box, Flex, SimpleGrid, Text } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 
 import TestimonialItem from './TestimonialItem';
@@ -21,13 +21,15 @@ const Testimonials = () => {
             <Text fontSize={{ base: '42px', md: '64px', lg: '72px' }} fontWeight="600">
                 Geo Papel
             </Text>
-            <SimpleGrid
-                columns={{ base: 1, md: 1, lg: 3 }}
-                spacing={{ base: '13vw', md: '4.3vw', lg: '2.5vw' }}>
-                {testimonials.map((testimonial, index) => (
-                    <TestimonialItem key={index} testimonial={testimonial} />
-                ))}
-            </SimpleGrid>
+            <Flex justifyContent="center">
+                <SimpleGrid
+                    columns={{ base: 1, md: 1, lg: 2, xl: 3 }}
+                    spacing={{ base: '13vw', md: '4.3vw', lg: '2.5vw' }}>
+                    {testimonials.map((testimonial, index) => (
+                        <TestimonialItem key={index} testimonial={testimonial} />
+                    ))}
+                </SimpleGrid>
+            </Flex>
         </Box>
     );
 };

@@ -1,4 +1,4 @@
-import { Box, SimpleGrid, Text } from '@chakra-ui/react';
+import { Box, Flex, SimpleGrid, Text } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 
 import ProductItem from './ProductItem';
@@ -22,14 +22,17 @@ const Products = () => {
             <Text fontSize={{ base: '42px', md: '64px', lg: '72px' }} fontWeight="600">
                 Productos
             </Text>
-            <SimpleGrid
-                py="5vw"
-                columns={{ base: 1, md: 1, lg: 3 }}
-                spacing={{ base: '13vw', md: '4.3vw', lg: '2.5vw' }}>
-                {products.map((product, index) => (
-                    <ProductItem key={index} product={product} />
-                ))}
-            </SimpleGrid>
+            <Flex justifyContent="center">
+                <SimpleGrid
+                    py="5vw"
+                    columns={{ base: 1, md: 1, lg: 2, xl: 3 }}
+                    spacing={{ base: '13vw', md: '4.3vw', lg: '3vw', xl: '2.5vw' }}
+                    spacingX={{ lg: '20vw' }}>
+                    {products.map((product, index) => (
+                        <ProductItem key={index} product={product} />
+                    ))}
+                </SimpleGrid>
+            </Flex>
         </Box>
     );
 };

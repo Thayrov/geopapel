@@ -7,9 +7,10 @@ const TestimonialItem = ({ testimonial }) => {
 
     return (
         <Flex pt={20} position="relative" justifyContent="center" alignItems="center">
-            <svg
-                width="330"
-                height="302"
+            <Box
+                as="svg"
+                width={{ base: '70vw', md: '55.99vw', lg: '44.79vw', xl: '32.65vw' }} //"330" {{base:'68.75vw',md:'55.99vw',lg:'44.79vw',xl:'35.83vw'}}
+                height={{ base: '65vw', md: '51.43vw', lg: '41.15vw', xl: '30vw' }} //"302"
                 viewBox="0 0 326 302"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -29,26 +30,28 @@ const TestimonialItem = ({ testimonial }) => {
                     d="M176 302C136.226 301.958 98.0942 286.035 69.9722 257.725C41.8501 229.416 26.0358 191.033 26 151H28.0755C27.8337 170.706 31.481 190.263 38.8059 208.539C46.1307 226.815 56.9874 243.446 70.7464 257.466C84.5054 271.487 100.893 282.619 118.959 290.217C137.025 297.815 156.409 301.727 175.989 301.727C195.568 301.727 214.953 297.815 233.019 290.217C251.084 282.619 267.472 271.487 281.231 257.466C294.99 243.446 305.847 226.815 313.172 208.539C320.496 190.263 324.144 170.706 323.902 151H326C325.958 191.031 310.142 229.41 282.021 257.719C253.9 286.027 215.772 301.952 176 302Z"
                     fill={theme.colors.brand['dark-green']}
                 />
-            </svg>
+            </Box>
             <Flex
-                pt={20}
+                pt={{ base: '26vw', md: '15vw', lg: '8vw', xl: '9vw' }}
                 position="absolute"
                 top="50%"
                 left="48%"
                 transform="translate(-50%, -50%)"
                 direction="column"
-                alignItems="center">
+                alignItems="center"
+                width={{ base: '61vw', md: '44vw', lg: '23vw', xl: '18vw' }}
+                height={{ base: '80vw', md: '60vw', lg: '30vw', xl: '30vw' }}>
                 <Text
                     color="#232323"
                     textAlign="center"
-                    fontSize="20px"
+                    fontSize={{ base: '15px', md: '24px', lg: '17px', xl: '22px' }}
                     fontStyle="normal"
                     fontWeight="600"
-                    lineHeight="34px">
+                    lineHeight={{ base: '28px', md: '40px', lg: '34px', xl: '26px' }}>
                     {testimonial.user}
                 </Text>
                 <Box
-                    maxW="70%"
+                    maxW={{ base: '70%', lg: '100%' }}
                     maxH="70%"
                     overflow="hidden"
                     textOverflow="ellipsis"
@@ -56,10 +59,10 @@ const TestimonialItem = ({ testimonial }) => {
                     <Text
                         color="#232323"
                         textAlign="center"
-                        fontSize={{ base: '14px', md: '20px' }}
+                        fontSize={{ base: '14px', md: '22px', lg: '17px', xl: '20px' }}
                         fontStyle="normal"
                         fontWeight="400"
-                        lineHeight="20px">
+                        lineHeight={{ base: '15px', md: '24px', lg: '20px', xl: '22px' }}>
                         {testimonial.testimonial}
                     </Text>
                 </Box>
