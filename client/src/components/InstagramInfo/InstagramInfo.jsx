@@ -23,7 +23,7 @@ const InstagramInfo = () => {
                             fontWeight={600}
                             fontSize={{ base: "30px", lg: "60px" }}>eco_comunicacion</Text>
                     </Flex>
-                    <Button
+                    <a href="https://www.instagram.com/eco_comunicacion/"> <Button
                         fontSize="20px"
                         p={8}
                         width={{ base: '80%', lg: '200px' }}
@@ -32,6 +32,7 @@ const InstagramInfo = () => {
                         box-shadow="2px 2px 8px 0px rgba(101, 101, 101, 0.25)"
                         borderRadius="20px 20px 20px 20px"
                         _hover={{ bg: 'brand.black' }}> Seguinos</Button>
+                        </a>
                 </Flex>
                 
             </Box>

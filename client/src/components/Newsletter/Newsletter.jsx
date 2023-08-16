@@ -1,5 +1,6 @@
 import { Box, Text, Input, Stack, InputRightElement, InputGroup, Button, Flex } from '@chakra-ui/react';
 import { ArrowForwardIcon } from '@chakra-ui/icons'
+
 const Newsletter = () => {
     return (
         <section>
@@ -8,8 +9,7 @@ const Newsletter = () => {
                 minHeight={{ base: "400px", lg: "450px" }}
                 backgroundColor="brand.dark-green"
                 color="white"
-                pt={20}
-            >
+                pt={20}>
                 <Flex
                     direction="column"
                     alignItems="center">
@@ -30,11 +30,12 @@ const Newsletter = () => {
                         pt={{ base: 4, lg: 8 }}>Queres recibir todas nuestras ofertas? Registrate ya mismo y comenzá a disfrutarlas!</Text>
 
                     <Stack>
-                        <form target="_blank" 
+                        <form 
                        action="https://formsubmit.co/valentinaillanesperret@gmail.com"
                         method="POST"
                         > 
-                       <input type="hidden" name="_next" value="http://localhost:5173/"/>
+                       <input type="hidden" name="_next" value="http://localhost:5173/" />
+                       <input type="hidden" name="_captcha" value="false"/>
 
                         <InputGroup
                             variant="custom"
@@ -42,7 +43,7 @@ const Newsletter = () => {
                             backgroundColor="#FEFFF6"
                             p={4}
                             borderRadius="20px 20px 20px 20px">
-                            <Input  type="email" name="email" class="form-control" required
+                            <Input type="email" name="email" class="form-control" required
                                 placeholder='Email'
                                 fontWeight={600}
                                 fontSize={20}

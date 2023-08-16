@@ -11,11 +11,11 @@ const FooterCategories = () => {
                 </Text>
                 <UnorderedList styleType="none" 
                  fontSize={{base:"20px", lg:"20px"}}>
-                    <ListItem pt={{base:2, lg:6}} >Nosotros</ListItem>
-                    <ListItem pt={{base:2, lg:6}} >Productos</ListItem>
-                    <ListItem  pt={{base:2, lg:6}}>Testimonios</ListItem>
-                    <ListItem pt={{base:2, lg:6}} >Reciclaje</ListItem>
-                    <ListItem pt={{base:2, lg:6}} >Contacto</ListItem>
+                    <ListItem pt={{base:2, lg:6}} ><a href="#nosotros">Nosotros  </a></ListItem>
+                    <ListItem pt={{base:2, lg:6}} ><a href="#productos"> Productos</a></ListItem>
+                    <ListItem  pt={{base:2, lg:6}}><a href="#testimonios">Testimonios</a></ListItem>
+                    <ListItem pt={{base:2, lg:6}} ><a href="#sustentabilidad">Sustentabilidad</a></ListItem>
+                    <ListItem pt={{base:2, lg:6}} ><a href="#contacto">Contacto</a></ListItem>
                 </UnorderedList>
             </Box>
     </div>;

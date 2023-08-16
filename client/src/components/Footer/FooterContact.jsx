@@ -27,11 +27,13 @@ const FooterContact = () => {
                         <Text pl={4} pt={2}> 47239545</Text>
                     </Flex>
                 </ListItem>
-                <ListItem pt={{ base:2, lg: 4 }} >
-                <Flex>
+                <ListItem pt={{ base:2, lg: 4 }}>
+                 <a href="https://wa.me/5491168070543?"> 
+                    <Flex>
                         <Image src={iconFooterContact3}></Image>
                         <Text pl={4} pt={2}> 1168070543</Text>
                     </Flex>
+                </a>
                 </ListItem>
                 <ListItem pt={{ base:2, lg: 4 }} >
                 <Flex>

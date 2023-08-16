@@ -4,9 +4,9 @@ import { Input, Textarea, Button} from '@chakra-ui/react';
 const ContactForm = () => {
     return <div>
         <form
-       
-        target="_blank" action="https://formsubmit.co/valentinaillanesperret@gmail.com" method="POST"> 
-          <input type="hidden" name="_next" value="http://localhost:5173/"/>
+             action="https://formsubmit.co/valentinaillanesperret@gmail.com" method="POST"> 
+          <input type="hidden" name="_next" value="http://localhost:5173/" />
+            <input type="hidden" name="_captcha" value="false"/>
             <Input
             type="nombre" name="nombre" required
             variant="custom"
