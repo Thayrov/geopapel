@@ -54,6 +54,7 @@ const ProductItem = ({ product }) => {
                     }}
                     alignItems={{ base: 'center', md: 'flex-start', lg: 'center' }}>
                     <Heading
+                        pe="1"
                         py={{ base: '0', md: '6', lg: '0' }}
                         fontWeight="600"
                         fontSize={{ base: '22px', md: '28px', lg: '18px', xl: '20px' }}>
@@ -105,7 +106,12 @@ const ProductItem = ({ product }) => {
 };
 
 ProductItem.propTypes = {
-    product: PropTypes.object.isRequired,
+    product: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        price: PropTypes.number.isRequired,
+        description: PropTypes.string.isRequired,
+        imageURL: PropTypes.string.isRequired,
+    }).isRequired,
 };
 
 export default ProductItem;

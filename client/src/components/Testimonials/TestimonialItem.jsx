@@ -1,4 +1,4 @@
-import { Box, Flex, Text, useTheme } from '@chakra-ui/react';
+import { Box, Flex, Text, VStack, useTheme } from '@chakra-ui/react';
 
 import PropTypes from 'prop-types';
 
@@ -6,7 +6,7 @@ const TestimonialItem = ({ testimonial }) => {
     const theme = useTheme();
 
     return (
-        <Flex pt={20} position="relative" justifyContent="center" alignItems="center">
+        <Flex pt={20} justifyContent="center" alignItems="center" position="relative">
             <Box
                 as="svg"
                 width={{ base: '70vw', md: '55.99vw', lg: '44.79vw', xl: '32.65vw' }}
@@ -31,47 +31,40 @@ const TestimonialItem = ({ testimonial }) => {
                     fill={theme.colors.brand['dark-green']}
                 />
             </Box>
-            <Flex
-                pt={{ base: '26vw', md: '15vw', lg: '8vw', xl: '9vw' }}
+            <VStack
                 position="absolute"
-                top="50%"
-                left="48%"
+                top="55%"
+                left="50%"
                 transform="translate(-50%, -50%)"
-                direction="column"
-                alignItems="center"
-                width={{ base: '61vw', md: '44vw', lg: '23vw', xl: '18vw' }}
-                height={{ base: '80vw', md: '60vw', lg: '30vw', xl: '30vw' }}>
+                spacing={4}
+                width="70%"
+                maxH="70%"
+                textAlign="center">
                 <Text
                     color="#232323"
-                    textAlign="center"
-                    fontSize={{ base: '15px', md: '24px', lg: '17px', xl: '22px' }}
-                    fontStyle="normal"
+                    fontSize={{ base: '15px', md: '24px', lg: '17px', xl: '18px' }}
                     fontWeight="600"
-                    lineHeight={{ base: '28px', md: '40px', lg: '34px', xl: '26px' }}>
+                    lineHeight={{ base: '28px', md: '40px', lg: '34px', xl: '22px' }}>
                     {testimonial.user}
                 </Text>
-                <Box
-                    maxW={{ base: '70%', lg: '100%' }}
-                    maxH="70%"
-                    overflow="hidden"
-                    textOverflow="ellipsis"
-                    whiteSpace="normal">
+                <Box>
                     <Text
                         color="#232323"
-                        textAlign="center"
-                        fontSize={{ base: '14px', md: '22px', lg: '17px', xl: '20px' }}
-                        fontStyle="normal"
-                        fontWeight="400"
-                        lineHeight={{ base: '15px', md: '24px', lg: '20px', xl: '22px' }}>
+                        fontSize={{ base: '14px', md: '22px', lg: '17px', xl: '19px' }}
+                        lineHeight={{ base: '15px', md: '24px', lg: '20px', xl: '21px' }}>
                         {testimonial.testimonial}
                     </Text>
                 </Box>
-            </Flex>
+            </VStack>
         </Flex>
     );
 };
+
 TestimonialItem.propTypes = {
-    testimonial: PropTypes.object.isRequired,
+    testimonial: PropTypes.shape({
+        user: PropTypes.string.isRequired,
+        testimonial: PropTypes.string.isRequired,
+    }).isRequired,
 };
 
 export default TestimonialItem;
