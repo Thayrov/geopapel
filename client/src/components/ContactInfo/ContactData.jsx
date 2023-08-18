@@ -1,4 +1,4 @@
-import { Box, Center, Flex, Image, ListItem, Text, UnorderedList, VStack } from '@chakra-ui/react';
+import { Box, Center, Flex, Image, ListItem, Text, UnorderedList } from '@chakra-ui/react';
 
 import Lottie from 'lottie-react';
 import animationData from '../../assets/Email2.json';
@@ -9,7 +9,7 @@ import iconContact4 from '../../assets/iconContact4.svg';
 
 const ContactData = () => {
     return (
-        <VStack>
+        <Box as="section" mx="0">
             <Center w="100%" h="100%" mt={{ base: 10, lg: 20 }}>
                 <Box
                     display={{ base: 'none', md: 'none', lg: 'block' }}
@@ -19,8 +19,8 @@ const ContactData = () => {
                 </Box>
             </Center>
 
-            <Box ml={{ base: 0, lg: 40 }}>
-                <UnorderedList styleType="none" fontSize={{ base: '14px', lg: '18px' }}>
+            <Box ml={{ base: 0, lg: 20 }}>
+                <UnorderedList styleType="none" fontSize={{ base: '14px', md: '20px' }} ml="0">
                     <ListItem pt={{ base: 0, lg: 4 }}>
                         <Flex>
                             <Image src={iconContact1}></Image>
@@ -61,7 +61,7 @@ const ContactData = () => {
                     </ListItem>
                 </UnorderedList>
             </Box>
-        </VStack>
+        </Box>
     );
 };
 
