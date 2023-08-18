@@ -3,14 +3,11 @@ import { Flex, Grid, GridItem, Image, Text } from '@chakra-ui/react';
 import recyclingIcon1 from '../../assets/recyclingIcon1.svg';
 import recyclingIcon2 from '../../assets/recyclingIcon2.svg';
 import recyclingIcon3 from '../../assets/recyclingIcon3.svg';
+
 const RecyclingCard = () => {
     return (
         <div>
-            <Grid
-                templateColumns={{ base: '1fr', md: '1fr', lg: 'repeat(3,1fr)' }}
-                ml={35}
-                mr={35}
-                mt={10}>
+            <Grid templateColumns={{ base: '1fr', md: '1fr', lg: 'repeat(3,1fr)' }} mx={35} mt={10}>
                 <GridItem>
                     <Flex direction="column" alignItems="center">
                         <Image src={recyclingIcon1}></Image>

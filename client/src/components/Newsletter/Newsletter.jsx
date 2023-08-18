@@ -47,7 +47,7 @@ const Newsletter = () => {
 
                             <InputGroup
                                 variant="custom"
-                                width={{ base: '400px', lg: '700px' }}
+                                width={{ base: '80vw', lg: '50vw' }}
                                 backgroundColor="#FEFFF6"
                                 p={4}
                                 borderRadius="20px 20px 20px 20px">

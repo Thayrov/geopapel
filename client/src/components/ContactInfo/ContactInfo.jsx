@@ -7,12 +7,9 @@ import animationData from '../../assets/Email2.json';
 
 const ContactInfo = () => {
     return (
-        <section>
-            <Box p={{ base: '6.5vw', lg: '10vw' }}>
-                <Grid
-                    templateColumns={{ base: '1fr', md: '1fr', lg: 'repeat(2,1fr)' }}
-                    mr={35}
-                    mt={10}>
+        <Box as="section" p={{ base: '10vw' }}>
+            <Box>
+                <Grid templateColumns={{ base: '1fr', md: '1fr', lg: 'repeat(2,1fr)' }} mt={10}>
                     <GridItem>
                         <Flex>
                             <Box>
@@ -29,7 +26,6 @@ const ContactInfo = () => {
                                     Contacto
                                 </Text>
                             </Box>
-
                             <Center w="100%" h="100%">
                                 <Box
                                     display={{ base: 'block', md: 'block', lg: 'none' }}
@@ -45,13 +41,11 @@ const ContactInfo = () => {
                         <ContactData />
                     </GridItem>
                 </Grid>
-            </Box>
-
-            <Box display="flex" justifyContent="center" alignItems="center">
                 <Box
-                    mb={{ base: 10, lg: 20 }}
-                    width={{ base: '90vw', lg: '80vw' }}
-                    height={{ base: '30vw', lg: '20vw' }}
+                    m="0 auto"
+                    mt="20"
+                    width={{ base: '80vw' }}
+                    height={{ base: '60vw', lg: '30vw', xl: '20vw' }}
                     borderRadius="20px"
                     boxShadow="0 0 0 2px transparent"
                     overflow="hidden">
@@ -66,7 +60,7 @@ const ContactInfo = () => {
                     />
                 </Box>
             </Box>
-        </section>
+        </Box>
     );
 };
 

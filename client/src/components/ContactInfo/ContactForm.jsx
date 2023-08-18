@@ -1,8 +1,8 @@
-import { Button, Input, Textarea } from '@chakra-ui/react';
+import { Button, Input, Textarea, VStack } from '@chakra-ui/react';
 
 const ContactForm = () => {
     return (
-        <div>
+        <VStack width={{ base: '80vw', lg: '40vw' }}>
             <form action="https://formsubmit.co/valentinaillanesperret@gmail.com" method="POST">
                 <input type="hidden" name="_next" value="http://localhost:5173/" />
                 <input type="hidden" name="_captcha" value="false" />
@@ -66,7 +66,7 @@ const ContactForm = () => {
                     Enviar{' '}
                 </Button>
             </form>
-        </div>
+        </VStack>
     );
 };
 
