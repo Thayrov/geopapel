@@ -1,4 +1,4 @@
-import { Box, Center, Flex, Image, ListItem, Text, UnorderedList } from '@chakra-ui/react';
+import { Box, Center, Flex, Image, Link, ListItem, Text, UnorderedList } from '@chakra-ui/react';
 
 import Lottie from 'lottie-react';
 import animationData from '../../assets/Email2.json';
@@ -18,49 +18,46 @@ const ContactData = () => {
                     <Lottie animationData={animationData} />
                 </Box>
             </Center>
-
-            <Box ml={{ base: 0, lg: 20 }}>
-                <UnorderedList styleType="none" fontSize={{ base: '14px', md: '20px' }} ml="0">
-                    <ListItem pt={{ base: 0, lg: 4 }}>
+            <UnorderedList
+                pl={{ base: 0, lg: 20 }}
+                styleType="none"
+                fontSize={{ base: '14px', md: '20px' }}
+                ml="0">
+                <ListItem pt={{ base: 0, lg: 4 }}>
+                    <Flex>
+                        <Image src={iconContact1}></Image>
+                        <Text pl={4} pt={2}>
+                            Domingo Savio 2919, San Isidro, Buenos Aires
+                        </Text>
+                    </Flex>
+                </ListItem>
+                <ListItem pt={{ base: 2, lg: 4 }}>
+                    <Flex>
+                        <Image src={iconContact2}></Image>
+                        <Text pl={4} pt={2}>
+                            47239545
+                        </Text>
+                    </Flex>
+                </ListItem>
+                <ListItem pt={{ base: 2, lg: 4 }}>
+                    <Link href="https://wa.me/5491168070543?">
                         <Flex>
-                            <Image src={iconContact1}></Image>
+                            <Image src={iconContact3}></Image>
                             <Text pl={4} pt={2}>
-                                {' '}
-                                Domingo Savio 2919, San Isidro, Buenos Aires
+                                1168070543
                             </Text>
                         </Flex>
-                    </ListItem>
-                    <ListItem pt={{ base: 2, lg: 4 }}>
-                        <Flex>
-                            <Image src={iconContact2}></Image>
-                            <Text pl={4} pt={2}>
-                                {' '}
-                                47239545
-                            </Text>
-                        </Flex>
-                    </ListItem>
-                    <ListItem pt={{ base: 2, lg: 4 }}>
-                        <a href="https://wa.me/5491168070543?">
-                            <Flex>
-                                <Image src={iconContact3}></Image>
-                                <Text pl={4} pt={2}>
-                                    {' '}
-                                    1168070543
-                                </Text>
-                            </Flex>
-                        </a>
-                    </ListItem>
-
-                    <ListItem pt={{ base: 2, lg: 4 }}>
-                        <Flex>
-                            <Image src={iconContact4}></Image>
-                            <Text pl={4} pt={2}>
-                                hola@geopapel.com.ar
-                            </Text>
-                        </Flex>
-                    </ListItem>
-                </UnorderedList>
-            </Box>
+                    </Link>
+                </ListItem>
+                <ListItem pt={{ base: 2, lg: 4 }}>
+                    <Flex>
+                        <Image src={iconContact4}></Image>
+                        <Text pl={4} pt={2}>
+                            hola@geopapel.com.ar
+                        </Text>
+                    </Flex>
+                </ListItem>
+            </UnorderedList>
         </Box>
     );
 };

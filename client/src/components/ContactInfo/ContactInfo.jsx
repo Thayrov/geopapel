@@ -7,7 +7,7 @@ import animationData from '../../assets/Email2.json';
 
 const ContactInfo = () => {
     return (
-        <Box as="section" p={{ base: '10vw' }}>
+        <Box as="section" p={{ base: '10vw', lg: '9.5vw' }} w="100%">
             <Grid templateColumns={{ base: '1fr', md: '1fr', lg: 'repeat(2,1fr)' }} mt={10}>
                 <GridItem>
                     <Flex>
@@ -15,13 +15,11 @@ const ContactInfo = () => {
                             <Text
                                 fontSize={{ base: '28px', md: '32px', lg: '48px' }}
                                 fontWeight="400">
-                                {' '}
-                                Info{' '}
+                                Info
                             </Text>
                             <Text
                                 fontSize={{ base: '42px', md: '64px', lg: '72px' }}
                                 fontWeight="600">
-                                {' '}
                                 Contacto
                             </Text>
                         </Box>

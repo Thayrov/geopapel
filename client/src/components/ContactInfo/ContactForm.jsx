@@ -14,7 +14,7 @@ const ContactForm = () => {
         });
     };
     return (
-        <VStack width={{ base: '80vw', lg: '40vw' }}>
+        <VStack width={{ base: '80vw', lg: '38vw' }}>
             <form
                 action="https://formsubmit.co/hola@geopapel.com.ar"
                 method="POST"
