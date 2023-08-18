@@ -35,7 +35,7 @@ function App() {
             <Box id="contacto">
                 <ContactInfo />
             </Box>
-            <Newsletter />
+            <Newsletter id="newsletter" />
             <InstagramInfo />
             <Footer />
         </Box>

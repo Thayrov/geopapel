@@ -34,6 +34,9 @@ const NosotrosSideBar = () => {
             top={{ base: '50%', md: '45%', lg: '35%' }}
             bg="brand.dark-green"
             borderRadius={{ base: '9px 0px 0px 9px', lg: '12px 0px 0px 12px' }}
+            borderWidth={'1px 0px 1px 1px'}
+            borderStyle="solid"
+            borderColor={'brand.yellow'}
             zIndex="1000">
             <Link href="#contacto">
                 <Box

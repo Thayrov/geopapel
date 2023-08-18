@@ -1,10 +1,25 @@
 import { Button, Input, Textarea, VStack } from '@chakra-ui/react';
 
+import Swal from 'sweetalert2';
+
 const ContactForm = () => {
+    const url = `${import.meta.env.VITE_URL}/#contacto`;
+    const alert = () => {
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: '¡Gracias por escribirnos!',
+            showConfirmButton: false,
+            timer: 1500,
+        });
+    };
     return (
         <VStack width={{ base: '80vw', lg: '40vw' }}>
-            <form action="https://formsubmit.co/valentinaillanesperret@gmail.com" method="POST">
-                <input type="hidden" name="_next" value="http://localhost:5173/" />
+            <form
+                action="https://formsubmit.co/hola@geopapel.com.ar"
+                method="POST"
+                onSubmit={alert}>
+                <input type="hidden" name="_next" value={url} />
                 <input type="hidden" name="_captcha" value="false" />
                 <Input
                     type="nombre"
@@ -62,8 +77,7 @@ const ContactForm = () => {
                     box-shadow="2px 2px 8px 0px rgba(101, 101, 101, 0.25)"
                     _hover={{ bg: 'brand.black' }}
                     _focus={{ outlineColor: 'transparent' }}>
-                    {' '}
-                    Enviar{' '}
+                    Enviar
                 </Button>
             </form>
         </VStack>
